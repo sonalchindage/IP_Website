@@ -1,26 +1,7 @@
 "use client";
 
-import { db } from "../firebaseConfig";
-
-import { collection, addDoc } from "firebase/firestore";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
-
-async function addDataToFireStore(name, email, message, subject) {
-  try {
-    const docRef = await addDoc(collection(db, "contact"), {
-      name: name,
-      email: email,
-      message: message,
-      subject: subject,
-    });
-    console.log("Document written with ID:", docRef.id);
-    return true;
-  } catch (error) {
-    console.error("Error adding document", error);
-    return false;
-  }
-}
 
 function Contact() {
   const [name, setName] = useState("");
@@ -28,16 +9,37 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
 
+  const timeoutRef = useRef(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const added = await addDataToFireStore(name, email, message, subject);
-    if (added) {
-      setName("");
-      setEmail("");
-      setMessage("");
-      setSubject("");
+    try {
+      const response = await fetch("api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
 
-      alert("Data added to firestore DB!!");
+      if (response.ok) {
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+
+        alert("message send successfully and data store in database");
+        console.log({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+        });
+      } else {
+        alert("Error");
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 

@@ -14,7 +14,7 @@ import "../../public/assets/vendor/glightbox/css/glightbox.min.css";
 import "../../public/assets/vendor/swiper/swiper-bundle.min.css";
 
 import Header from "./navbar/page";
-import Contact from "./contact/page";
+
 import Footer from "./footer/page";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         <Script src="assets/vendor/swiper/swiper-bundle.min.js" />
         {/* <Script src="assets/vendor/php-email-form/validate.js" /> */}
         <Script src="assets/js/main.js" />
-        <Contact />
+
         <Footer />
       </body>
     </html>

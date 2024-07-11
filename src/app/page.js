@@ -3,6 +3,7 @@
 
 import { useEffect } from "react";
 import aos from "../../public/assets/vendor/aos/aos.js";
+import Contact from "./contact/page";
 export default function Home() {
   useEffect(() => {
     aos.init();
@@ -1543,6 +1544,7 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- End F.A.Q Section --> */}
+      <Contact />
     </div>
   );
 }
