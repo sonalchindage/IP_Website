@@ -13,10 +13,6 @@ import "../../public/assets/vendor/aos/aos.css";
 import "../../public/assets/vendor/glightbox/css/glightbox.min.css";
 import "../../public/assets/vendor/swiper/swiper-bundle.min.css";
 
-import Header from "./navbar/page";
-
-import Footer from "./footer/page";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -32,7 +28,7 @@ export default function RootLayout({ children }) {
         {children}
         {/* <script src="js/bootstrap.bundle.min.js" /> */}
         {/* <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" /> */}
-        <Header />
+
         <Script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" />
         <Script src="assets/vendor/aos/aos.js" />
         <Script src="assets/vendor/glightbox/js/glightbox.min.js" />
@@ -40,8 +36,6 @@ export default function RootLayout({ children }) {
         <Script src="assets/vendor/swiper/swiper-bundle.min.js" />
         {/* <Script src="assets/vendor/php-email-form/validate.js" /> */}
         <Script src="assets/js/main.js" />
-
-        <Footer />
       </body>
     </html>
   );

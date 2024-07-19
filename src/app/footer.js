@@ -1,7 +1,36 @@
-import Head from "next/head";
-// import Newsletter from "../"
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setEmail("");
+
+        alert("message send successfully and data store in database");
+        console.log({
+          email: email,
+        });
+      } else {
+        alert("Error");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       {/* <!-- ======= Footer ======= --> */}
@@ -59,25 +88,21 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* <!-- <div className="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i className="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i className="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i className="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i className="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i className="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> --> */}
-
               <div className="col-lg-4 col-md-6 footer-newsletter">
                 <h4>Our Newsletter</h4>
                 <p>
                   Stay informed and never miss out on the latest updates with
                   our newsletter subscription
                 </p>
-                <form action="" method="post">
-                  <input type="email" name="email" />
+                <form onSubmit={handleSubmit}>
+                  <input
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    type="email"
+                    name="email"
+                  />
                   <input type="submit" value="Subscribe" />
                 </form>
                 {/* <Newsletter /> */}
