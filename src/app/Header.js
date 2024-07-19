@@ -81,7 +81,7 @@ function Header() {
                     color: "black",
                   }}
                 >
-                  Welcome, {userName || "User"}
+                  Welcome {userName || "Admin"}
                 </span>
               </li>
               <li className="nav-item">
