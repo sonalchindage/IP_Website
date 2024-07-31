@@ -1,7 +1,4 @@
-// src/app/api/contact/route.js
 import { NextResponse } from "next/server";
-// import { db } from "../../../../firebaseConfig";
-//import { db } from "../../../firebaseConfig";
 import { db } from "@/app/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { trasporter } from "@/app/utils/mailSender.utils";

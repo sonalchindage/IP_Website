@@ -6,8 +6,8 @@ import aos from "../../public/assets/vendor/aos/aos.js";
 import Contact from "./contact.js";
 import { AuthProvider } from "./Context/AuthContext.js";
 import Header from "./Header.js";
-
 import Footer from "./footer.js";
+
 export default function Home() {
   useEffect(() => {
     aos.init();
@@ -1066,8 +1066,8 @@ export default function Home() {
             <div className="row gy-5">
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="200"
+                data-aos="zoom-in"
+                data-aos-delay="200"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1093,8 +1093,8 @@ export default function Home() {
 
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="400"
+                data-aos="zoom-in"
+                data-aos-delay="400"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1120,8 +1120,8 @@ export default function Home() {
 
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="600"
+                data-aos="zoom-in"
+                data-aos-delay="600"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1146,8 +1146,8 @@ export default function Home() {
               {/* <!-- End Team Member --> */}
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="600"
+                data-aos="zoom-in"
+                data-aos-delay="600"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1174,8 +1174,8 @@ export default function Home() {
             <div className="row gy-5 mt-5">
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="200"
+                data-aos="zoom-in"
+                data-aos-delay="200"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1201,8 +1201,8 @@ export default function Home() {
 
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="400"
+                data-aos="zoom-in"
+                data-aos-delay="400"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1228,8 +1228,8 @@ export default function Home() {
 
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="600"
+                data-aos="zoom-in"
+                data-aos-delay="600"
               >
                 <div className="team-member">
                   <div className="member-img">
@@ -1254,8 +1254,8 @@ export default function Home() {
               {/* <!-- End Team Member --> */}
               <div
                 className="col-xl-3 col-md-3 d-flex"
-                // data-aos="zoom-in"
-                // data-aos-delay="600"
+                data-aos="zoom-in"
+                data-aos-delay="600"
               >
                 <div className="team-member">
                   <div className="member-img">

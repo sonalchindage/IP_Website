@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
-//import { useAuth } from "../context/AuthContext";
 import { useAuth } from "./Context/AuthContext";
 
 function Header() {
@@ -57,7 +56,7 @@ function Header() {
               <li className="nav-item">
                 <Link href="/industries/dentistry">Dentistry</Link>
               </li>
-              <li>
+              <li className="nav-item">
                 <Link href="/industries/chiropractic">Chiropractic</Link>
               </li>
               <li className="nav-item">
@@ -115,22 +114,6 @@ function Header() {
                   </button>
                 </Link>
               </li>
-
-              {/* <li className="nav-item">
-                <Link href="/sign-up">
-                  <button
-                    style={{
-                      fontSize: "0.9rem",
-                      padding: "2px 3px",
-                      background: "none",
-                      color: "black",
-                      border: "none",
-                    }}
-                  >
-                    Sign Up
-                  </button>
-                </Link>
-              </li> */}
             </>
           )}
         </ul>

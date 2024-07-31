@@ -19,7 +19,7 @@ const Login = () => {
     setLoading(true);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/");
+      router.push("/dashbord");
     } catch (error) {
       console.error("Error logging in..", error);
       alert("Login failed");

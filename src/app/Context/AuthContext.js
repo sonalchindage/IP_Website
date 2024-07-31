@@ -7,12 +7,6 @@ import { doc, getDoc } from "firebase/firestore";
 // import { auth, db } from "../Firebase";
 import { auth, db } from "../firebaseConfig";
 
-// interface AuthContextProps {
-//   user: User | null;
-//   userName: string | null;
-//   logout: () => void;
-// }
-
 const AuthContext = createContext(undefined);
 
 export const AuthProvider = ({ children }) => {
