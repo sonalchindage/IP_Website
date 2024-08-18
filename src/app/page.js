@@ -3,10 +3,11 @@
 
 import { useEffect } from "react";
 import aos from "../../public/assets/vendor/aos/aos.js";
-import Contact from "./contact.js";
+// import Contact from "./Components/contact.js/index.js";
+import Contact from "./Components/contact.js";
 import { AuthProvider } from "./Context/AuthContext.js";
-import Header from "./Header.js";
-import Footer from "./footer.js";
+import Header from "./Components/Header.js";
+import Footer from "./Components/footer.js";
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Home() {
     <div>
       <AuthProvider>
         <Header />
+
         <section
           id="hero-fullscreen"
           className="hero-fullscreen d-flex align-items-center"

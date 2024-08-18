@@ -24,10 +24,7 @@ export default function AdminDashboard() {
         </p>
       </Link>
       <br />
-      {/* ADMIN DASHBOARD
-            <h1>
-               Hello, {userName || 'admin'}
-            </h1> */}
+
       <div className="d-flex">
         <Sidebar setView={setView} />
         <div className="p-4 w-100">

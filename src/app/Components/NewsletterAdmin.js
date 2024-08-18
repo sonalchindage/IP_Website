@@ -12,6 +12,7 @@ import {
 import { useState, useEffect } from "react";
 
 import { db } from "../firebaseConfig";
+import Link from "next/link";
 
 const NewsletterAdmin = () => {
   const [newsletters, setNewsletters] = useState([]);
@@ -24,7 +25,7 @@ const NewsletterAdmin = () => {
     const getNewsletters = async () => {
       try {
         console.log("Fetching data from Firestore...");
-        const newsletterData = await getDocs(collection(db, "newsletter"));
+        const newsletterData = await getDocs(collection(db, "subscribers"));
         const fetchedNewsletters = newsletterData.docs.map((doc) => {
           const data = doc.data();
           const timestamp = data.timestamp;
@@ -52,7 +53,7 @@ const NewsletterAdmin = () => {
 
   const handleDelete = async (id) => {
     try {
-      const docRef = doc(db, "newsletters", id);
+      const docRef = doc(db, "subscribers", id);
       await deleteDoc(docRef);
       setNewsletters(newsletters.filter((newsletter) => newsletter.id !== id));
     } catch (error) {
@@ -63,7 +64,7 @@ const NewsletterAdmin = () => {
 
   const handleUpdate = async (id) => {
     try {
-      const docRef = doc(db, "newsletter", id);
+      const docRef = doc(db, "subscribers", id);
       await updateDoc(docRef, { email: editEmail });
       setNewsletters(
         newsletters.map((newsletter) =>
@@ -90,7 +91,13 @@ const NewsletterAdmin = () => {
 
   return (
     <div>
-      <h2>Newsletter Admin</h2>
+      <div className="d-flex justify-content-between">
+        <h2>Newsletter Admin</h2>
+        <Link href="/addnewsletter">
+          <button className="add-newsletter">Add New Newsletter</button>
+        </Link>
+      </div>
+
       {newsletters.length === 0 ? (
         <div className="text-center">Database is empty</div>
       ) : (

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 
 function Contact() {
@@ -8,8 +8,7 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
-
-  const timeoutRef = useRef(null);
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +18,7 @@ function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, subject, message }),
+        body: JSON.stringify({ name, email, subject, message, phone }),
       });
 
       if (response.ok) {
@@ -27,6 +26,7 @@ function Contact() {
         setEmail("");
         setSubject("");
         setMessage("");
+        setPhone("");
 
         alert("message send successfully and data store in database");
         console.log({
@@ -34,6 +34,7 @@ function Contact() {
           email: email,
           subject: subject,
           message: message,
+          phone: phone,
         });
       } else {
         alert("Error");
@@ -115,14 +116,9 @@ function Contact() {
             </div>
 
             <div className="col-lg-8">
-              <form
-                // onSubmit={(e) => sendEnq(e)}
-                onSubmit={handleSubmit}
-                //role="form"
-                className="php-email-form"
-              >
-                <div className="row">
-                  <div className="col-md-6 form-group">
+              <form onSubmit={handleSubmit} className="php-email-form">
+                <div className="row mt-3">
+                  <div className="form-group col-6">
                     <input
                       type="text"
                       name="name"
@@ -136,7 +132,7 @@ function Contact() {
                       }}
                     />
                   </div>
-                  <div className="col-md-6 form-group mt-3 mt-md-0">
+                  <div className=" form-group  col-6">
                     <input
                       type="email"
                       className="form-control"
@@ -151,13 +147,30 @@ function Contact() {
                     />
                   </div>
                 </div>
+                {/* <div> */}
+                <div className="form-group mt-3">
+                  <input
+                    type="tel"
+                    name="phone"
+                    className="form-control"
+                    id="phone"
+                    placeholder="Your Phone Number"
+                    required
+                    value={phone}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                    }}
+                  />
+                </div>
+                {/* </div> */}
+
                 <div className="form-group mt-3">
                   <input
                     type="text"
                     className="form-control"
                     name="subject"
                     id="subject"
-                    placeholder="Subject"
+                    placeholder="Bussiness"
                     required
                     value={subject}
                     onChange={(e) => {

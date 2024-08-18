@@ -32,7 +32,7 @@ const ContactAdmin = () => {
 
   const handleDelete = async (id) => {
     try {
-      const docRef = doc(db, "contacts", id); // Correctly reference the document
+      const docRef = doc(db, "contacts", id);
       await deleteDoc(docRef);
       setContacts(contacts.filter((contact) => contact.id !== id));
     } catch (error) {
@@ -57,7 +57,10 @@ const ContactAdmin = () => {
                     {contact.email}
                   </h6>
                   <p className="card-text">
-                    <strong>Subject:</strong> {contact.subject}
+                    <strong>Phone:</strong> {contact.phone}
+                  </p>
+                  <p className="card-text">
+                    <strong>Business Name:</strong> {contact.subject}
                   </p>
                   <p className="card-text">
                     <strong>Message:</strong> {contact.message}

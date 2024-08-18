@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
-import { useAuth } from "./Context/AuthContext";
+import { useAuth } from "../Context/AuthContext";
 
 function Header() {
   const { user, userName, logout } = useAuth();

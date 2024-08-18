@@ -5,13 +5,14 @@ import { db } from "../../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { trasporter } from "@/app/utils/mailSender.utils";
 export async function POST(req) {
-  const { name, email, subject, message } = await req.json();
+  const { name, email, subject, message, phone } = await req.json();
   try {
     const docRef = await addDoc(collection(db, "contacts"), {
       name,
       email,
       subject,
       message,
+      phone,
       timestamp: new Date(),
     });
 
