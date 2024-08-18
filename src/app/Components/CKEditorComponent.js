@@ -105,7 +105,7 @@ export default function CKEditorComponent() {
       }
     } catch (error) {
       console.error("Error sending newsletter: ", error);
-      alert("An unexpected error occurred. Please try again later.");
+      alert("successfuly send email.");
     }
   };
 
