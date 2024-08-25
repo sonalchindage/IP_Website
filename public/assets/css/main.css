@@ -267,12 +267,12 @@ section {
 # Desktop Navigation 
 --------------------------------------------------------------*/
 @media (min-width: 1280px) {
-  .navbar {
+  nav_bar {
     padding: 0;
     position: relative;
   }
 
-  .navbar ul {
+  nav_bar ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -280,16 +280,16 @@ section {
     align-items: center;
   }
 
-  .navbar li {
+  nav_bar li {
     position: relative;
   }
 
-  .navbar > ul > li {
+  nav_bar > ul > li {
     white-space: nowrap;
   }
 
-  .navbar a,
-  .navbar a:focus {
+  nav_bar a,
+  nav_bar a:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -303,14 +303,14 @@ section {
     position: relative;
   }
 
-  .navbar a i,
-  .navbar a:focus i {
+  nav_bar a i,
+  nav_bar a:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
   }
 
-  .navbar > ul > li > a:before {
+  nav_bar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -324,35 +324,35 @@ section {
     transition: all 0.3s ease-in-out 0s;
   }
 
-  .navbar a:hover:before,
-  .navbar li:hover > a:before,
-  .navbar .active:before {
+  nav_bar a:hover:before,
+  nav_bar li:hover > a:before,
+  nav_bar .active:before {
     visibility: visible;
     transform: scaleX(0.7);
   }
 
-  .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover > a {
+  nav_bar a:hover,
+  nav_bar .active,
+  nav_bar .active:focus,
+  nav_bar li:hover > a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown a:hover:before,
-  .navbar .dropdown:hover > a:before,
-  .navbar .dropdown .active:before {
+  nav_bar .dropdown a:hover:before,
+  nav_bar .dropdown:hover > a:before,
+  nav_bar .dropdown .active:before {
     visibility: hidden;
   }
 
-  .navbar .dropdown a:hover,
-  .navbar .dropdown .active,
-  .navbar .dropdown .active:focus,
-  .navbar .dropdown:hover > a {
+  nav_bar .dropdown a:hover,
+  nav_bar .dropdown .active,
+  nav_bar .dropdown .active:focus,
+  nav_bar .dropdown:hover > a {
     color: var(--color-white);
     background: var(--color-secondary);
   }
 
-  .navbar .dropdown ul {
+  nav_bar .dropdown ul {
     display: block;
     position: absolute;
     left: 0;
@@ -366,11 +366,11 @@ section {
     transition: 0.3s;
   }
 
-  .navbar .dropdown ul li {
+  nav_bar .dropdown ul li {
     min-width: 200px;
   }
 
-  .navbar .dropdown ul a {
+  nav_bar .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
@@ -378,57 +378,57 @@ section {
     color: rgba(var(--color-white-rgb), 0.5);
   }
 
-  .navbar .dropdown ul a i {
+  nav_bar .dropdown ul a i {
     font-size: 12px;
   }
 
-  .navbar .dropdown ul a:hover,
-  .navbar .dropdown ul .active,
-  .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover > a {
+  nav_bar .dropdown ul a:hover,
+  nav_bar .dropdown ul .active,
+  nav_bar .dropdown ul .active:hover,
+  nav_bar .dropdown ul li:hover > a {
     color: var(--color-white);
     background: var(--color-primary);
   }
 
-  .navbar .dropdown:hover > ul {
+  nav_bar .dropdown:hover > ul {
     opacity: 1;
     visibility: visible;
   }
 
-  .navbar .megamenu {
+  nav_bar .megamenu {
     position: static;
   }
 
-  .navbar .megamenu ul {
+  nav_bar .megamenu ul {
     right: 0;
     padding: 10px;
     display: flex;
   }
 
-  .navbar .megamenu ul li {
+  nav_bar .megamenu ul li {
     flex: 1;
   }
 
-  .navbar .megamenu ul li a,
-  .navbar .megamenu ul li:hover > a {
+  nav_bar .megamenu ul li a,
+  nav_bar .megamenu ul li:hover > a {
     color: rgba(var(--color-white-rgb), 0.5);
     background: none;
   }
 
-  .navbar .megamenu ul li a:hover,
-  .navbar .megamenu ul li .active,
-  .navbar .megamenu ul li .active:hover {
+  nav_bar .megamenu ul li a:hover,
+  nav_bar .megamenu ul li .active,
+  nav_bar .megamenu ul li .active:hover {
     color: var(--color-white);
     background: var(--color-primary);
   }
 
-  .navbar .dropdown .dropdown ul {
+  nav_bar .dropdown .dropdown ul {
     top: 0;
     left: calc(100% - 30px);
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  nav_bar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -437,11 +437,11 @@ section {
 }
 
 @media (min-width: 1280px) and (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
+  nav_bar .dropdown .dropdown ul {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  nav_bar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -450,7 +450,7 @@ section {
 # Mobile Navigation
 --------------------------------------------------------------*/
 @media (max-width: 1279px) {
-  .navbar {
+  nav_bar {
     position: fixed;
     top: 0;
     left: -100%;
@@ -460,7 +460,7 @@ section {
     z-index: 9997;
   }
 
-  .navbar ul {
+  nav_bar ul {
     position: absolute;
     inset: 0;
     padding: 10px 0;
@@ -471,8 +471,8 @@ section {
     z-index: 9998;
   }
 
-  .navbar a,
-  .navbar a:focus {
+  nav_bar a,
+  nav_bar a:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -484,22 +484,22 @@ section {
     transition: 0.3s;
   }
 
-  .navbar a i,
-  .navbar a:focus i {
+  nav_bar a i,
+  nav_bar a:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
   }
 
-  .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover > a {
+  nav_bar a:hover,
+  nav_bar .active,
+  nav_bar .active:focus,
+  nav_bar li:hover > a {
     color: var(--color-white);
   }
 
-  .navbar .dropdown ul,
-  .navbar .dropdown .dropdown ul {
+  nav_bar .dropdown ul,
+  nav_bar .dropdown .dropdown ul {
     position: static;
     display: none;
     padding: 10px 0;
@@ -508,8 +508,8 @@ section {
     border: 1px solid rgba(var(--color-secondary-light-rgb), 0.3);
   }
 
-  .navbar .dropdown > .dropdown-active,
-  .navbar .dropdown .dropdown > .dropdown-active {
+  nav_bar .dropdown > .dropdown-active,
+  nav_bar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -536,11 +536,11 @@ section {
     position: relative;
   }
 
-  .mobile-nav-active .navbar {
+  .mobile-nav-active nav_bar {
     left: 0;
   }
 
-  .mobile-nav-active .navbar:before {
+  .mobile-nav-active nav_bar:before {
     content: "";
     position: fixed;
     inset: 0;

@@ -8,6 +8,7 @@ import Contact from "./Components/contact.js";
 import { AuthProvider } from "./Context/AuthContext.js";
 import Header from "./Components/Header.js";
 import Footer from "./Components/footer.js";
+// import Client from "./Components/client.js";
 
 export default function Home() {
   useEffect(() => {
@@ -939,108 +940,120 @@ export default function Home() {
         {/* <!-- End Features Section --> */}
 
         {/* <!-- ======= Clients Section ======= --> */}
+        {/* <Client /> */}
         <section id="clientlogos" className="clients">
-          <div className="container" data-aos="zoom-out">
-            <div className="clients-slider swiper">
-              <div className="swiper-wrapper align-items-center">
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-1.png"
-                    className="img-fluid"
-                    alt="Taj Group of Hotels"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-2.png"
-                    className="img-fluid"
-                    alt="Bharat Diamond Bourse"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-3.png"
-                    className="img-fluid"
-                    alt="Crompton Greaves"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-4.png"
-                    className="img-fluid"
-                    alt="Orange"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-5.png"
-                    className="img-fluid"
-                    alt="Tata Sons"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-6.png"
-                    className="img-fluid"
-                    alt="BKT - Balkrishna Tyres"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-7.png"
-                    className="img-fluid"
-                    alt="Tata Motors"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-8.png"
-                    className="img-fluid"
-                    alt="ICICI Bank"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-9.png"
-                    className="img-fluid"
-                    alt="Siyarams"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-10.png"
-                    className="img-fluid"
-                    alt="Tata Docomo"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-11.png"
-                    className="img-fluid"
-                    alt="Syandard Chartered"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-12.png"
-                    className="img-fluid"
-                    alt="Godrej"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-13.png"
-                    className="img-fluid"
-                    alt="Cipla"
-                  />
-                </div>
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/clients/client-14.png"
-                    className="img-fluid"
-                    alt="JSW"
-                  />
-                </div>
+          <div className="container">
+            <div className="section-header">
+              <h2>Clients</h2>
+              <p>Feathers in our cap across 2 decades.</p>
+            </div>
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-1.png"
+                  className="img-fluid"
+                  alt="Taj Group of Hotels"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-2.png"
+                  className="img-fluid"
+                  alt="Bharat Diamond Bourse"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-3.png"
+                  className="img-fluid"
+                  alt="Crompton Greaves"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-4.png"
+                  className="img-fluid"
+                  alt="Orange"
+                />
+              </div>
+            </div>
+
+            <div className="row mt-4">
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-5.png"
+                  className="img-fluid"
+                  alt="Tata Sons"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-6.png"
+                  className="img-fluid"
+                  alt="BKT - Balkrishna Tyres"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-7.png"
+                  className="img-fluid"
+                  alt="Tata Motors"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-8.png"
+                  className="img-fluid"
+                  alt="ICICI Bank"
+                />
+              </div>
+            </div>
+
+            <div className="row mt-4">
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-9.png"
+                  className="img-fluid"
+                  alt="Siyarams"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-10.png"
+                  className="img-fluid"
+                  alt="Tata Docomo"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-11.png"
+                  className="img-fluid"
+                  alt="Syandard Chartered"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-12.png"
+                  className="img-fluid"
+                  alt="Godrej"
+                />
+              </div>
+            </div>
+
+            <div className="row mt-4">
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-13.png"
+                  className="img-fluid"
+                  alt="Cipla"
+                />
+              </div>
+              <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-center">
+                <img
+                  src="assets/img/clients/client-14.png"
+                  className="img-fluid"
+                  alt="JSW"
+                />
               </div>
             </div>
           </div>
