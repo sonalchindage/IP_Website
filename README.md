@@ -83,7 +83,16 @@ Role-based access control ensures each admin has access only to relevant functio
 - Features intuitive navigation between **Contact Admin** and **Newsletter Admin** dashboards.  
 
 #### **Technical Skills**  
-- The use of **Firebase**, **CKEditor**, and **Nodemailer** demonstrates technical proficiency and effective implementation of modern technologies.  
+- The use of
+- **React.js**,
+- **Next.js**,
+- **JavaScript**,
+- **HTML**,
+- **Tailwind CSS**,
+- **Firebase**,
+- **CKEditor**,
+- and **Nodemailer**
+demonstrates technical proficiency and effective implementation of modern technologies.  
 
 #### **Documentation**  
 - The project includes detailed documentation to guide setup and describe features clearly.  
