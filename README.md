@@ -1,5 +1,5 @@
 
-The **Ideation People Solutions Website** is a secure and efficient web application designed with an **Admin Panel** to manage website functionalities. The platform simplifies administrative tasks while ensuring ease of use for authorized users.  
+The Ideation People Solutions Website is a secure and efficient web application entirely designed and developed by Sonal Chindage. The project features a comprehensive Admin Panel to manage website functionalities, simplifying administrative tasks while ensuring ease of use for authorized users.
 
 
 
@@ -11,18 +11,22 @@ The project implements a secure **Admin Panel** with role-based access, allowing
 
 
 ### Scenario Fit  
-The admin panel in this project aligns with the **RBAC scenario** by providing separate functionalities for two types of admins:  
 
-1. **Contact Admin**:  
-   - Manages user details submitted via the contact form.  
-   - Can perform CRUD (Create, Read, Delete) operations on user data, displayed dynamically on cards for flexibility.  
+The admin panel in this project aligns with the RBAC scenario by providing separate functionalities for two types of admins:
 
-2. **Newsletter Admin**:  
-   - Manages subscribers and newsletter data.  
-   - Allows the admin to create newsletters using a CKEditor, update or delete subscriber details, and send newsletters using **Nodemailer**.  
+Contact Admin:
 
-This segregation of tasks demonstrates the implementation of role-based functionalities as required.  
+Manages user details submitted via the contact form.
+Can perform CRUD (Create, Read, Delete) operations on user data, displayed dynamically on cards for flexibility.
+Newsletter Admin:
 
+Manages subscribers and newsletter data.
+Allows the admin to create newsletters using CKEditor, update or delete subscriber details, and send newsletters using Nodemailer.
+When users click on the Log In button in the navbar, they are prompted to enter a username and password. The current credentials for access are:
+
+Username: sonalchindage@gmail.com
+Password: sonal@12345
+This segregation of tasks demonstrates the implementation of role-based functionalities as required.
 
 
 ### Core Requirements Coverage  
@@ -91,7 +95,7 @@ This segregation of tasks demonstrates the implementation of role-based function
 
 
 ### Conclusion  
-The Ideation People Solutions Website effectively demonstrates role-based access control by dividing admin functionalities into well-defined roles. Its secure and dynamic design ensures flexibility and efficiency, making it a suitable submission for the RBAC assignment. With its robust features and clear role segregation, the project showcases a practical implementation of RBAC principles.
+The Ideation People Solutions Website, entirely developed by Sonal Chindage, demonstrates role-based access control by dividing admin functionalities into well-defined roles. Its secure and dynamic design ensures flexibility and efficiency, making it a suitable submission for the RBAC assignment. With its robust features and clear role segregation, the project showcases a practical implementation of RBAC principles.
 
 
 
