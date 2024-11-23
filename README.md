@@ -22,12 +22,14 @@ Newsletter Admin:
 
 Manages subscribers and newsletter data.
 Allows the admin to create newsletters using CKEditor, update or delete subscriber details, and send newsletters using Nodemailer.
-When users click on the Log In button in the navbar, they are prompted to enter a username and password. The current credentials for access are:
+
+When users click on the Log In button in the navbar, they are prompted to enter a username and password. Only authorized admins with valid credentials can log in to access the Admin Panel. The current credentials for access are:
 
 Username: sonalchindage@gmail.com
 Password: sonal@12345
-This segregation of tasks demonstrates the implementation of role-based functionalities as required.
 
+
+This segregation of tasks demonstrates the implementation of role-based functionalities as required.
 
 ### Core Requirements Coverage  
 
